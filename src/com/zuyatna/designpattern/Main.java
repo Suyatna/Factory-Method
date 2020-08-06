@@ -10,11 +10,19 @@ public class Main {
 
         ChatFactory factory = new ChatFactory();
 
-        System.out.print("> ");
+        System.out.print("say: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String text = reader.readLine();
 
         Chat chat = factory.createChat(text);
-        chat.getResponseText();
+
+        try {
+
+            System.out.println(chat.getResponseText());
+        }
+        catch (Exception e) {
+
+            System.out.println("I don't understand" + e);
+        }
     }
 }

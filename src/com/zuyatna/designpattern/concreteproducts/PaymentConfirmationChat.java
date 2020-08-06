@@ -14,8 +14,8 @@ public class PaymentConfirmationChat implements Chat {
     @Override
     public String getResponseText() {
 
-        System.out.println("001");
+        setOrderNum("001");
 
-        return null;
+        return orderNum;
     }
 }

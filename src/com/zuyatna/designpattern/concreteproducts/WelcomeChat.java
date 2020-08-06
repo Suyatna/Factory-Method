@@ -7,8 +7,6 @@ public class WelcomeChat implements Chat {
     @Override
     public String getResponseText() {
 
-        System.out.println("welcome to chat, bro/sis");
-
-        return null;
+        return "welcome to chit-chat with me, bro/sis";
     }
 }
