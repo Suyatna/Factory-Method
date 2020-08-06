@@ -13,3 +13,13 @@ As a result, you will end up with pretty nasty code, riddled with conditionals t
 # Solution
 The Factory Method Pattern suggests that you replace direct object contruction calls (using the new chat) with calls to a special factory method. Don't worry: the objects are sill created via the new chat, but it's being called from within the factory method.
 Objects returned by a factory method are often referred to as "products".
+
+At first glance, this change may look pointless: we just moved the constructor call from one part of the program to another. However, consider this: now you can override the class
+of products being created by the method.
+
+There's a slight limitation though: subclasses may return different types of products only if these products have a common base class or interface. Alse, the factory method
+in the base class should have its return type declared as this interface.
+
+Reference: Dive Into Design Patterns by Alexander Shvets
+
+Link: https://www.goodreads.com/en/book/show/43125355-dive-into-design-patterns
