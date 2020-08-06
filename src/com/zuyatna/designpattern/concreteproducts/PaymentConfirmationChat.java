@@ -14,8 +14,6 @@ public class PaymentConfirmationChat implements Chat {
     @Override
     public String getResponseText() {
 
-        setOrderNum("001");
-
         return orderNum;
     }
 }

@@ -2,8 +2,6 @@ package com.zuyatna.designpattern.concreteproducts;
 
 import com.zuyatna.designpattern.Chat;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ProductChat implements Chat {
@@ -18,13 +16,12 @@ public class ProductChat implements Chat {
     @Override
     public String getResponseText() {
 
-        List<String> features = new ArrayList<>();
-        features.add("promotion");
-        features.add("entertainment");
-        features.add("fashion");
+        StringBuilder response = new StringBuilder();
 
-        setProducts(features);
+        for (int i = 0; i < products.size(); i++) {
+            response.append("\n").append(i + 1).append(" ").append(products.get(i));
+        }
 
-        return Arrays.toString(new List[]{products});
+        return response.toString();
     }
 }
