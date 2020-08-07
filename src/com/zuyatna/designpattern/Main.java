@@ -15,16 +15,16 @@ public class Main {
 
         ChatFactory factory = new ChatFactory();
 
+        List<String> features = new ArrayList<>();
+        features.add("entertainment");
+        features.add("fashion");
+        features.add("information");
+
         System.out.print("say: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String text = reader.readLine();
 
         Chat chat = factory.createChat(text);
-
-        List<String> features = new ArrayList<>();
-        features.add("entertainment");
-        features.add("fashion");
-        features.add("information");
 
         try {
 

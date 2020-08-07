@@ -7,6 +7,6 @@ public class WelcomeChat implements Chat {
     @Override
     public String getResponseText() {
 
-        return "welcome to chit-chat with me, bro/sis";
+        return "\nwelcome to chit-chat with me, bro/sis";
     }
 }
